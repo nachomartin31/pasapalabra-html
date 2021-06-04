@@ -1,4 +1,4 @@
-/*--Generales--*/
+/*--General variables--*/
 
 :root {
     --color-principal: #39AEE6;
@@ -76,7 +76,7 @@ p {
 }
 
 
-/*--Prejuego--*/
+/*--Pregame--*/
 
 .cuadroTiempo {
     width: 5rem;
@@ -90,7 +90,7 @@ p {
 }
 
 
-/*--Juego--*/
+/*--Game--*/
 
 .rosco {
     margin: 0 auto 2rem;
