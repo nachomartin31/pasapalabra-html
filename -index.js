@@ -196,9 +196,9 @@ function mostrarMensaje(mensaje) { //Función para comunicar al usuario el estad
     alerta.textContent = mensaje; //El contenido del mensaje es dinámico en función de la respuesta
     rosco.appendChild(alerta);
 
-    setTimeout(() => { //A los 3s se borra el mensaje
+    setTimeout(() => { //A los 1.5s se borra el mensaje
         alerta.remove();
-    }, 4500);
+    }, 1500);
 }
 
 function ronda() { //Función para el botón de enviar respuesta
