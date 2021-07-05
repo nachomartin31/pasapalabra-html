@@ -198,7 +198,7 @@ function mostrarMensaje(mensaje) { //Función para comunicar al usuario el estad
 
     setTimeout(() => { //A los 3s se borra el mensaje
         alerta.remove();
-    }, 1500);
+    }, 4500);
 }
 
 function ronda() { //Función para el botón de enviar respuesta
