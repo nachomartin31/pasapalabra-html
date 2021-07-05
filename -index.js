@@ -308,10 +308,13 @@ function showRanking() { // Función para mostrar el ranking
     user.hits = hits;
     user.mistakes = mistakes;
     for (let i = 0; i < ranking.length; i++) {
-        if (ranking.length < 11) { //Si la puntuación del usuario es mayor a la de un puesto del ranking se almacena en su sitio.
-            user.hits > ranking[i].hits ? ranking.splice(i, 0, user) : '';
-            if (user.hits == ranking[i].hits) { //Si hay empate en aciertos se comprueba el número de errores para actualizar el ranking
-                user.mistakes < ranking[i].mistakes ? ranking.splice(i, 0, user) : '';
+        if (ranking.length < 11) {
+            if (user.hits > ranking[i].hits) {
+                ranking.splice(i, 0, user) //Si la puntuación del usuario es mayor a la de un puesto del ranking se almacena en su sitio.
+            } else if (user.hits == ranking[i].hits) {
+                if (user.mistakes < ranking[i].mistakes) { //Si hay empate en aciertos se comprueba el número de errores para actualizar el ranking
+                    ranking.splice(i, 0, user)
+                }
             }
         }
     }
